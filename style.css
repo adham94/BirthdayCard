@@ -1,7 +1,7 @@
 #outside {
   z-index: 1;
   position: absolute;
-  background-color: #EAEAEA;
+  background-color: rgb(255, 255, 255);
   width: 100%;
   height: 100%;
   text-align: center;
