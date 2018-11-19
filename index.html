@@ -1,6 +1,7 @@
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 <head>
   <link rel="stylesheet" href="style.css">
@@ -16,6 +17,10 @@
   <link rel="stylesheet" href="./assets/css/adm.css" />
   <link rel="stylesheet" href="./assets/css/demo.css" />
 
+  <style>
+    .mySlides {display:none;}
+    </style>
+
 </head>
 
 <body>
@@ -30,7 +35,15 @@
     </p>
 
     <p id="message">
-      <img id="outside-pic" src="img\IMG-20180916-WA0008.jpg" class="img-rounded img-adham">
+      <!--img id="outside-pic" src="img\IMG-20180916-WA0008.jpg" class="img-rounded img-adham"-->
+
+      <div class="w3-content w3-section " style="max-width:300px">
+        <img id="outside-pic" src="img\IMG-20180916-WA0008.jpg" class="img-rounded img-adham mySlides">
+        <img id="outside-pic" src="img\IMG-20181006-WA0006.jpg" class="img-rounded img-adham mySlides">
+        <img id="outside-pic" src="img\IMG-20181104-WA0000.jpg" class="img-rounded img-adham mySlides">
+      </div>
+
+
     </p>
 
     <p>
@@ -53,7 +66,7 @@
           </p-->
 
     <p id="message">
-      Di hari ulang tahun sayang ini, tidak ada apa yang boleh saya berikan kepada sayang selain doa,. semoga sayang sentiasa dikurniakan
+      Di hari ulang tahun sayang ni, tidak ada apa yang boleh saya berikan kepada sayang selain doa,. saya mendoakan semoga sayang sentiasa dikurniakan
       kesihatan, dipermudahkan segala urusan, hari sayang akan lebih ceria, dan sentiasa kekal bahagia bersama yang tercinta.
       xx :D walaupun perkenalan kita ini tidak bergitu lama, tetapi sayang perlu tahu hati saya akan sentiasa menjadi hati
       sayang, Dimana saja sayang berada, saya nak sayang sentiasa senyum dan bahagia, Dimana pun sayang berada, saya akan
@@ -63,8 +76,28 @@
     <p>
       <button onclick="close_card()">Click to close</button>
     </p>
+    <br>
 
   </div>
+
+
+
+  <script>
+    var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+    </script>
 
 </body>
 
